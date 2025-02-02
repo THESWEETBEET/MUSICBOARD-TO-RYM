@@ -3,22 +3,20 @@
   "name": "RYM to Musicboard Sync",
   "version": "1.0",
   "description": "Sync your RateYourMusic ratings with Musicboard.",
-  "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["*://rateyourmusic.com/*", "*://musicboard.app/*"],
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "https://rateyourmusic.com/*",
+    "https://musicboard.app/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
   },
   "content_scripts": [
     {
-      "matches": ["*://rateyourmusic.com/*"],
+      "matches": ["https://rateyourmusic.com/*"],
       "js": ["content.js"]
     }
   ]
