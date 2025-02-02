@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.action === "syncRatings") {
-        console.log("Syncing ratings...");
-        fetchRatingsFromRYM();
+    if (message.action === "storeRatings") {
+        console.log("Received ratings:", message.data);
+        chrome.storage.local.set({ ratings: message.data });
     }
 });
 
