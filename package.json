@@ -1,0 +1,11 @@
+{
+  "name": "rym-musicboard-sync",
+  "version": "1.0.0",
+  "description": "Sync RYM ratings with Musicboard",
+  "scripts": {
+    "lint": "eslint src/"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  }
+}
