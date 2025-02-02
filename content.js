@@ -6,3 +6,4 @@ document.querySelectorAll('.rating_entry').forEach(entry => {
     ratings.push({ album, artist, rating });
 });
 chrome.runtime.sendMessage({ action: "storeRatings", data: ratings });
+
