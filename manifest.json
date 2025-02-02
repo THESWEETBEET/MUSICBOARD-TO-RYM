@@ -7,14 +7,14 @@
   "host_permissions": [
     "https://rateyourmusic.com/*",
     "https://musicboard.app/*"
-  ],
+  ]
   "background": {
     "service_worker": "background.js"
-  },
+  }
   "action": {
     "default_popup": "popup.html",
     }
-  },
+  }
   "content_scripts": [
     {
       "matches": ["https://rateyourmusic.com/*"],
